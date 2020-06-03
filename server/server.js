@@ -5,8 +5,6 @@ const bodyParser = require("body-parser");
 const morgan = require("morgan");
 const request = require("request");
 
-require("dotenv").config();
-
 const PORT = 5678;
 
 var app = express();
