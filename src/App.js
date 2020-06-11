@@ -4,8 +4,9 @@ import { BrowserRouter, Switch, Route, NavLink } from "react-router-dom";
 import "./App.css";
 
 import Kendra from "./components/Kendra/Kendra";
-import IntroAnimation from './components/IntroAnimation/IntroAnimation'
-import Gallery from './components/Eric/Gallery'
+import IntroAnimation from "./components/IntroAnimation/IntroAnimation";
+import Gallery from "./components/Eric/Gallery";
+import LeonardGallery from "./components/MoDerangedArt";
 
 function App() {
   return (
@@ -13,17 +14,21 @@ function App() {
       <NavWrapper>
         <NavLink to="/">MoDA Home</NavLink>
         <NavLink to="/kendra">Kendra</NavLink>
-        <NavLink to='/eric'>Eric</NavLink>
+        <NavLink to="/eric">Eric</NavLink>
+        <NavLink to="/MoDerangedArt">Leonard</NavLink>
       </NavWrapper>
       <Switch>
         <Route exact path="/">
-          <IntroAnimation/>
+          <IntroAnimation />
         </Route>
         <Route exact path="/kendra">
           <Kendra />
         </Route>
         <Route exact path="/eric">
           <Gallery />
+        </Route>
+        <Route path="/MoDerangedArt">
+          <LeonardGallery />
         </Route>
       </Switch>
     </BrowserRouter>
